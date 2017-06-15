@@ -32,26 +32,53 @@
             android:layout_alignParentEnd="true"
             android:weightSum="1">
 
-            <TextView
-                android:id="@+id/textView7"
+            <EditText
+                android:id="@+id/editText2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="นายสุภชีพ โอสถศรี รหัส 59110640442"
-                android:layout_weight="0.04" />
+                android:ems="10"
+                android:text="Name" />
 
-            <TextView
-                android:id="@+id/textView8"
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="LastName" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Age" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Address" />
+
+            <Button
+                android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.04"
-                android:text="สาขาเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์" />
+                android:onClick="date"
+                android:text="ส่ง" />
 
-            <ImageView
-                android:id="@+id/imageView3"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="0.04"
-                app:srcCompat="@drawable/qwe" />
+                android:orientation="horizontal">
+
+            </LinearLayout>
 
         </LinearLayout>
     </RelativeLayout>
