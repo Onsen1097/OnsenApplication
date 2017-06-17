@@ -64,11 +64,15 @@
                 android:inputType="textPersonName"
                 android:text="Address" />
 
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.04"
                 android:onClick="date"
                 android:text="ส่ง" />
 

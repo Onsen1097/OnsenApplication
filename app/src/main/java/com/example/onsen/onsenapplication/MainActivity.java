@@ -6,19 +6,23 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import static com.example.onsen.onsenapplication.R.id.editText2;
 import static com.example.onsen.onsenapplication.R.id.editText3;
 import static com.example.onsen.onsenapplication.R.id.editText4;
 import static com.example.onsen.onsenapplication.R.id.editText5;
+import static com.example.onsen.onsenapplication.R.id.spinner;
 
 public class MainActivity extends AppCompatActivity {
     String editTextName;
     String editTextLName;
     String editTextAge;
     String editTextAddress;
+    String spinner1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +54,11 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );*/
+        final Spinner spinner = (Spinner) findViewById(R.id.spinner);
 
+        final String[] con = getResources().getStringArray(R.array.country_arraye);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line, con);
+        spinner.setAdapter(adapter);
     }
     public void date(View view) {
         EditText editTextName1 = (EditText) findViewById(editText2);
@@ -65,14 +73,19 @@ public class MainActivity extends AppCompatActivity {
         EditText editTextAddress4 = (EditText) findViewById(editText5);
         editTextAddress = editTextAddress4.getText().toString();
 
+        Spinner editSpinner = (Spinner) findViewById(spinner);
+        spinner1 = editSpinner.getSelectedItem().toString();
+
         Intent intent = new Intent(this,Main2Activity.class);
         intent.putExtra("editTextName",editTextName);
         intent.putExtra("editTextLName",editTextLName);
         intent.putExtra("editTextAge",editTextAge);
         intent.putExtra("editTextAddress",editTextAddress);
         intent.putExtra("tal","0848454544");
+        intent.putExtra("spinner",spinner1);
         startActivity(intent);
-
-
     }
+
+
+
 }

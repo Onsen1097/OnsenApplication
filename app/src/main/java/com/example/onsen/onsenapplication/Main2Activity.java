@@ -16,13 +16,18 @@ public class Main2Activity extends AppCompatActivity {
         String surname = intent.getStringExtra("editTextLName");
         String age = intent.getStringExtra("editTextAge");
         String add = intent.getStringExtra("editTextAddress");
+        String g = intent.getStringExtra("spinner");
+
         TextView textName = (TextView) findViewById(R.id.textView9);
         TextView textsurName = (TextView) findViewById(R.id.textView10);
         TextView textage = (TextView) findViewById(R.id.textView11);
         TextView textadd = (TextView) findViewById(R.id.textView12);
+        TextView textg = (TextView) findViewById(R.id.textView);
+
         textName.setText(name);
         textsurName.setText(surname);
         textage.setText(age);
         textadd.setText(add);
+        textg.setText(g);
     }
 }
